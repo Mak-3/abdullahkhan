@@ -98,11 +98,11 @@ input[type="checkbox"]{
     display: block;
   }
   #click:checked ~ .menu-btn i:before{
-    content: "Back";
+    content: "\f00d";
   }
   .navbar nav ul{
     position: fixed;
-    top: 80px;
+    top: 60px;
     left: -100%;
     background: #111;
     height: 100vh;
@@ -346,15 +346,20 @@ input[type="checkbox"]{
   }
 }
 .about {
-  min-height: 100vh;
+  width: 80%;
+  margin-left: 10%;
   display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.about .container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
 .about:nth-child(1) {
   color: #e0ffff;
-}
-.about .container {
-  margin: 100px;
 }
 .about .text-container {
   display: flex;
@@ -438,6 +443,8 @@ input[type="checkbox"]{
   .skills{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .skill{
     height: auto;
@@ -571,16 +578,22 @@ input[type="checkbox"]{
 }
 @media screen and (max-width: 900px) {
   .projects ul li div {
-    width: 350px;
+    width: 80vw;
   }
   .projects ul li:nth-child(even) div {
-    left: -175px;
+    left: -40vw;
   }
   .projects ul li:nth-child(odd) div{
-    left: -175px;
+    left: -40vw;
   }
   .projects ul li{
     left: 0;
     visibility: hidden;
+  }
+  .projects ul li:nth-child(odd) div {
+    transform: translate3d(0, 0, 0);
+  }
+  .projects ul li:nth-child(even) div {
+    transform: translate3d(0, 0, 0);
   }
 }
